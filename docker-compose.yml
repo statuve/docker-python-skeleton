@@ -1,0 +1,9 @@
+services:
+  python310:
+    build: .
+    container_name: python310
+    command: python src/main.py --host 0.0.0.0 --port 5678 --reload
+    ports:
+      - 5678:5678
+    volumes:
+      - .:/code
